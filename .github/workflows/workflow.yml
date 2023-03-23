@@ -7,11 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
+      
+      - name: Install required Node.js version
+        uses: actions/setup-node@v3
+        
       - name: Run tests
         uses: DevExpress/testcafe-action@latest
         with:
-          args: "chromium tests --reporter xunit:reports/xunit/report.xml"
+          args: "chrome tests --reporter xunit:reports/xunit/report.xml"
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
