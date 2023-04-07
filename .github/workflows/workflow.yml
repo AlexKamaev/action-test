@@ -13,9 +13,11 @@ jobs:
         uses: actions/setup-node@v3
         
       - name: Run tests
-        uses: DevExpress/testcafe-action@v0.0.6
+        uses: DevExpress/testcafe-action@latest
         with:
+          commit: 62635a6ed3f0eb21e09bf2447dc27d3f240c01e9
           args: "chrome tests --reporter xunit:reports/xunit/report.xml --app 'npx http-server' --app-init-delay 60000"
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
