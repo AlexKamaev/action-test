@@ -15,6 +15,7 @@ jobs:
       - name: Run tests
         uses: DevExpress/testcafe-action@v0.0.6
         with:
+          version: 2.3.0
           args: "chrome tests --reporter xunit:reports/xunit/report.xml --app 'npx http-server' --app-init-delay 60000"
 
       - name: Upload Artifact
