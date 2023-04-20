@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "pad-thai": "https://github.com/giodamelio/pad-thai.git#commit=468e770d83b1e11a33599345f53436d23b62ff65"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexKamaev/action-test.git"
